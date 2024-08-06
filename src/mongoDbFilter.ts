@@ -10,14 +10,14 @@ type GraphQLOperators = GraphQLLeafOperators | GraphQLRootOperators;
 type MongoDbOperators = MongoDbLeafOperators | MongoDbRootOperators;
 
 export type GraphQLFilter = {
-    [key: string]: GraphQLFilter[] | GraphQLObjectFilter | GraphQLLeafFilter;
+    [key: string]: GraphQLFilter[] | GraphQLObjectFilter | GraphQLLeafFilter | undefined;
     OR?: GraphQLFilter[];
     AND?: GraphQLFilter[];
     NOR?: GraphQLFilter[];
 };
 
 type GraphQLObjectFilter = {
-    [key: string]: GraphQLObjectFilter | GraphQLLeafFilter | ('exists' | 'not_exists');
+    [key: string]: GraphQLObjectFilter | GraphQLLeafFilter | ('exists' | 'not_exists') | undefined;
     opr?: 'exists' | 'not_exists';
 };
 
@@ -37,7 +37,7 @@ function isLeafTypeTypeGuard(fieldFilter: GraphQLObjectFilter | GraphQLLeafFilte
 }
 
 export type MongoDbFilter = {
-    [key: string]: MongoDbLeafFilter | { $elemMatch: MongoDbObjectFilter } | { $exists?: boolean } | MongoDbFilter[];
+    [key: string]: MongoDbLeafFilter | { $elemMatch: MongoDbObjectFilter } | { $exists?: boolean } | MongoDbFilter[] | undefined;
     $or?: MongoDbFilter[];
     $and?: MongoDbFilter[];
     $nor?: MongoDbFilter[];
