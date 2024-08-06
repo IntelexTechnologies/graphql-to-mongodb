@@ -1,5 +1,5 @@
 {
-  "name": "graphql-to-mongodb",
+  "name": "@intelextechnologies/graphql-to-mongodb",
   "version": "1.6.5",
   "description": "Generic run-time generation of input filter types for existing graphql types, and parsing of said input types into MongoDB queries",
   "main": "lib/index.js",
@@ -9,16 +9,8 @@
     "publish-now": "npm run build && npm publish",
     "test": "ts-mocha tests/**/*.spec.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Soluto/graphql-to-mongodb.git"
-  },
   "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Soluto/graphql-to-mongodb/issues"
-  },
-  "homepage": "https://github.com/Soluto/graphql-to-mongodb#readme",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@types/chai": "^4.1.4",
     "@types/graphql": "^14.2.0",
