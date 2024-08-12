@@ -10,10 +10,10 @@ type GraphQLOperators = GraphQLLeafOperators | GraphQLRootOperators;
 type MongoDbOperators = MongoDbLeafOperators | MongoDbRootOperators;
 
 export type GraphQLFilter = {
-    [key: string]: GraphQLFilter[] | GraphQLObjectFilter | GraphQLLeafFilter | undefined;
-    OR?: GraphQLFilter[];
-    AND?: GraphQLFilter[];
-    NOR?: GraphQLFilter[];
+    [key: string]: (GraphQLFilter | null)[] | GraphQLObjectFilter | GraphQLLeafFilter | undefined | null;
+    OR?: (GraphQLFilter | null)[] | null;
+    AND?: (GraphQLFilter | null)[] | null;
+    NOR?: (GraphQLFilter | null)[] | null;
 };
 
 type GraphQLObjectFilter = {
