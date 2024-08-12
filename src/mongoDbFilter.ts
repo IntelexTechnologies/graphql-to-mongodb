@@ -17,8 +17,8 @@ export type GraphQLFilter = {
 };
 
 type GraphQLObjectFilter = {
-    [key: string]: GraphQLObjectFilter | GraphQLLeafFilter | ('exists' | 'not_exists') | undefined;
-    opr?: 'exists' | 'not_exists';
+    [key: string]: GraphQLObjectFilter | GraphQLLeafFilter | ('exists' | 'not_exists') | undefined | null;
+    opr?: 'exists' | 'not_exists' | null;
 };
 
 type GraphQLLeafFilterInner = {
