@@ -26,8 +26,8 @@ type GraphQLLeafFilterInner = {
 };
 
 type GraphQLLeafFilter = GraphQLLeafFilterInner & {
-    NOT?: GraphQLLeafFilterInner;
-    opr?: MongoDbLeafOperators;
+    NOT?: GraphQLLeafFilterInner | null;
+    opr?: MongoDbLeafOperators | null;
     value?: any;
     values?: any[];
 };
