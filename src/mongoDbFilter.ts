@@ -29,7 +29,7 @@ type GraphQLLeafFilter = GraphQLLeafFilterInner & {
     NOT?: GraphQLLeafFilterInner | null;
     opr?: MongoDbLeafOperators | null;
     value?: any;
-    values?: any[];
+    values?: any[] | null;
 };
 
 function isLeafTypeTypeGuard(fieldFilter: GraphQLObjectFilter | GraphQLLeafFilter, fieldType: GraphQLObjectType | GraphQLLeafType): fieldFilter is GraphQLLeafFilter {
