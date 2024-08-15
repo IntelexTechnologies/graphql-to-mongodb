@@ -43,7 +43,7 @@ function getGraphQLSortTypeFields(type: GraphQLFieldsType, ...excludedFields: st
 }
 
 export const GraphQLSortType = new GraphQLEnumType({
-    name: 'SortType',
+    name: 'SortTypeEnum',
     values: {
         ASC: { value: 1 },
         DESC: { value: -1 }

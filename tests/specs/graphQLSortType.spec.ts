@@ -12,7 +12,7 @@ describe("graphQLSortType", () => {
         it("Should get a sort type from object", () => {
             // Arrange
             const sortTypeEnum = new GraphQLEnumType({
-                name: 'SortType',
+                name: 'SortTypeEnum',
                 values: {
                     ASC: { value: 1 },
                     DESC: { value: -1 }
@@ -77,7 +77,7 @@ describe("graphQLSortType", () => {
         it("Should get a sort type from interface", () => {
             // Arrange
             const sortTypeEnum = new GraphQLEnumType({
-                name: 'SortType',
+                name: 'SortTypeEnum',
                 values: {
                     ASC: { value: 1 },
                     DESC: { value: -1 }
@@ -146,7 +146,7 @@ describe("graphQLSortType", () => {
             });
 
             const sortTypeEnum = new GraphQLEnumType({
-                name: 'SortType',
+                name: 'SortTypeEnum',
                 values: {
                     ASC: { value: 1 },
                     DESC: { value: -1 }
@@ -185,7 +185,7 @@ describe("graphQLSortType", () => {
             });
 
             const sortTypeEnum = new GraphQLEnumType({
-                name: 'SortType',
+                name: 'SortTypeEnum',
                 values: {
                     ASC: { value: 1 },
                     DESC: { value: -1 }
